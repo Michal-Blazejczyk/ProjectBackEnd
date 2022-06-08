@@ -1,7 +1,7 @@
 {
   "name": "michal",
   "version": "1.0.0",
-  "homepage": "https://michal-blazejczyk.github.io/app-back.end/",
+  "homepage": "https://https://michal-blazejczyk.github.io/ProjectBackEnd/",
   "description": "My first React app",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "Michal",
   "license": "MIT",
   "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.17.12",
     "axios": "^0.20.0",
     "bem-css-modules": "^1.4.2",
     "react": "^16.13.1",
