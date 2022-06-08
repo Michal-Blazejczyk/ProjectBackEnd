@@ -2780,7 +2780,8 @@ var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
 // CONCATENATED MODULE: ./src/helpers/request.js
 
 var request = axios_default.a.create({
-  baseURL: 'http://localhost:8000'
+  baseURL: 'http://localhost:8000',
+  validateStatus: false
 });
 /* harmony default export */ var helpers_request = (request);
 // CONCATENATED MODULE: ./src/store/storeProvider.jsx
@@ -2977,6 +2978,11 @@ var LoginForm_LoginForm = function LoginForm(_ref) {
     };
   }();
 
+  Object(react["useEffect"])(function () {
+    if (isModalOpen) {
+      resetStateOfInput();
+    }
+  }, [isModalOpen]);
   var validateMessageComponent = validateMassage.length ? /*#__PURE__*/react_default.a.createElement("p", {
     className: LoginForm_style('validate-message')
   }, validateMassage) : null;
