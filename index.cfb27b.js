@@ -641,7 +641,7 @@ function _inheritsLoose(subClass, superClass) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"aside-menu":"aside-menu","aside-menu__title":"aside-menu__title","aside-menu__link":"aside-menu__link"};
+module.exports = {"aside-menu":"aside-menu","aside-menu__nav-wrapper":"aside-menu__nav-wrapper","aside-menu__title":"aside-menu__title","aside-menu__link":"aside-menu__link"};
 
 /***/ }),
 /* 5 */
@@ -5846,9 +5846,11 @@ var AsideMenu_AsideMenu = function AsideMenu() {
   var adminMenuComponent = (user === null || user === void 0 ? void 0 : user.accessLevel) === ADMIN_TYPE ? /*#__PURE__*/react_default.a.createElement(subcomponents_AdminMenu, null) : null;
   return /*#__PURE__*/react_default.a.createElement("section", {
     className: AsideMenu_style()
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: AsideMenu_style('nav-wrapper')
   }, /*#__PURE__*/react_default.a.createElement(subcomponents_UserMenu, {
     isUserLogged: Boolean(user)
-  }), adminMenuComponent);
+  }), adminMenuComponent));
 };
 
 /* harmony default export */ var commponents_AsideMenu_AsideMenu = (AsideMenu_AsideMenu);
@@ -6159,10 +6161,9 @@ var Course_Course = function Course(_ref) {
   }, /*#__PURE__*/react_default.a.createElement("h3", {
     className: Course_style('title')
   }), /*#__PURE__*/react_default.a.createElement("img", {
-    alt: title
-    /* className={style('image')} */
-    ,
-    src: ".././"
+    alt: title,
+    className: Course_style('image'),
+    src: img
   }), /*#__PURE__*/react_default.a.createElement("p", {
     className: Course_style('price')
   }, "Koszt kursu: ".concat(price, "z\u0142")), /*#__PURE__*/react_default.a.createElement("p", {
